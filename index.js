@@ -13,7 +13,7 @@ app.use(cors());
 app.use('/users',userRouter)
 app.use('/posts',postRouter)
 
-const port = 8080;
+const port = process.env.PORT || 8080;
 app.listen(port , async(req,res)=>{
     try {
         await connect();
